@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% load static %}  
+<link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+
+
+{% block title %}Home{% endblock %}
+{% block content %}
+    <h1>Welcome to NZ Health{% if user.is_authenticated %}, {{ user.username }}!</h1>
+{% endif %}
+    <img src="{% static 'images/welcome-image.jpg' %}" alt="Graphics of medical professionals">
+    <p>Lorem ipsum dolor sit amet, dolor accumsan adversarium sit ad, te altera vocibus reprimique pri, has et primis cetero. Sit vocibus iudicabit philosophia ut. Et qui omnis molestiae scripserit. At munere nostrud atomorum has. Cu his augue omnesque voluptua.</p>
+{% endblock %}

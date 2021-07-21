@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+  {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+
+{% block content %}
+{% if next %}
+{% if user.is_authenticated %}
+  <p>Your account doesn't have access to this page. To proceed,
+  please login with an account that has access.</p>
+{% else %}
+  <p>Please login to see this page.</p>
+{% endif %}
+{% endif %}
+<form method="POST" class="post-form" action="/emp">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Enter Details</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Referral Id:</label>  
+    <div class="col-sm-4">  
+      {{ form.referral_id }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Last Name:</label>  
+    <div class="col-sm-4">  
+      {{ form.last_name }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">First Name:</label>  
+    <div class="col-sm-4">  
+      {{ form.first_name }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Note:</label>  
+    <div class="col-sm-4">  
+      {{ form.note }}  
+    </div>  
+  </div>  
+ <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Referrer</label>  
+    <div class="col-sm-4">  
+      {{ form.referrer }}  
+    </div>  
+  </div>  
+
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Submit</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+{% endblock %}

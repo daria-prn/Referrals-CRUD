@@ -1,0 +1,559 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+a,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style-position: inside;
+}
+
+
+/* LAYOUT */
+
+
+/* Page Grid */
+
+body {
+    margin: 0 auto;
+}
+
+header,
+footer {
+    padding: 0.5em;
+}
+
+main,
+aside {
+    padding: 1em 0.5em;
+}
+
+main li {
+    margin-bottom: 0.5em;
+}
+
+.date span {
+    text-align: right;
+}
+
+.table-referrals {
+    text-align: center;
+    width: 100%;
+}
+
+/* MAIN MENU */
+
+#main-menu ul {
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+#main-menu a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 2em;
+}
+
+
+/* Mobile Menu */
+
+#main-menu {
+    position: fixed;
+    /* Position the menu at the top left of the window */
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* The full height of the window */
+    width: 0;
+    /* 0 width - change this with JavaScript to show the menu */
+    z-index: 10;
+    /* Make the menu appear in front of other page content */
+    overflow: hidden;
+    /* Make sure the horizontal scrollbar does not appear inside the menu */
+    padding-top: 2.75em;
+    /* Make space for the close button - adjust value to suit the design */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the menu */
+    /* Uncomment the next line and set a value if you do not want the menu to cover the full width of the viewport. */
+    /* max-width: 30em; */
+}
+
+#main-menu ul {
+    white-space: nowrap;
+}
+
+#main-menu li {
+    line-height: 1.2;
+    border-bottom: 1px solid #fff;
+}
+
+#main-menu a {
+    display: block;
+    /* Needs to be block, not inline (the default for <a>), so padding can be added */
+    padding: 0.5em 0.5em 0.5em 2em;
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: bolder;
+}
+
+#menu-button,
+#close-button {
+    /* Change the pointer to a hand if the user mouses over the buttons */
+    cursor: pointer;
+    line-height: 1;
+}
+
+#menu-button {
+    /* Position the menu button at the top right of the header. If the menu
+       button should not scroll with the page, change the position to fixed and
+       adjust its top and right position as needed.*/
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.8rem;
+    /* The size of the hamburger icon */
+}
+
+#close-button {
+    /* Position and style the close button at the top right corner of the 
+       slide-out menu). Set the top and right values,  */
+    position: absolute;
+    top: 0;
+    right: 0.3rem;
+    font-size: 2.5rem;
+    /* Change this so that the 'X' looks the same size as the hamburger icon */
+    padding: 0;
+}
+
+
+/* TYPOGRAPHY */
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+#site-title,
+#login {
+    font-weight: bold;
+    text-align: center;
+}
+
+#site-title {
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+nav a {
+    font-size: 1.3rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+#login ul {
+    font-size: 0.8rem;
+}
+
+figcaption {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#login a {
+    font-size: 1.3rem;
+}
+
+.table-referrals th {
+    font-size: 1.2rem;
+}
+
+
+/* COLOUR SCHEME & BORDERS */
+
+body {
+    color: #272727;
+}
+
+header {
+    background-color: #ffffff;
+    color: #4bbab2;
+}
+
+footer {
+    background-color: rgb(235, 235, 235);
+    color: #4bbab2;
+}
+
+header nav {
+    background-color: #ffffff;
+    color: #4bbab2;
+}
+
+#login a {
+    color: #c41f27;
+}
+
+main {
+    background-color: #e7e9e9;
+}
+
+h1 {
+    color: #4bbab2;
+}
+
+h2 {
+    color: white;
+}
+
+.date {
+    color: white;
+}
+
+nav,
+aside {
+    background-color: #739e97;
+}
+
+nav a {
+    color: #637e66;
+}
+
+footer a {
+    color: #fff;
+}
+
+.table-referrals th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-referrals tr:hover {background-color: #f5f5f5;} 
+
+.table-referrals th {
+    color: #4bbab2;
+  }
+.table-referrals a{
+    text-decoration: none;
+}
+.edit:hover {
+    color:#4bba5d;
+}
+.edit{
+    color:#286e33;
+    padding:0.4rem;
+}
+.delete:hover {
+    color:#c41f27;
+}
+.delete{
+    color:#92050c;
+    padding:0.4rem;
+}
+/* NAVIGATION */
+
+nav ul,
+footer ul {
+    list-style-type: none;
+}
+
+nav li {
+    padding: 0.5em 2em 0.5em 0;
+}
+
+nav a,
+footer a {
+    text-decoration: none;
+}
+
+
+/* IMAGES & VIDEOS */
+
+img {
+    width: 100%;
+}
+
+header img {
+    width: 50%;
+}
+
+.lead-in {
+    width: auto;
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 39rem) {
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #login ul {
+        display: flex;
+        flex-direction: row;
+    }
+    footer {
+        /* We need a flexbox to push the links to the left of the footer
+           and the copyright item to the right. */
+        display: flex;
+        justify-content: space-between;
+    }
+    footer ul {
+        display: flex;
+    }
+    footer li {
+        margin-right: 2em;
+    }
+}
+
+@media only screen and (min-width: 40rem) {
+    body {
+        /* Create a centred fixed-width box. */
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    header,
+    footer {
+        grid-column: 1 / span 2;
+    }
+    #main-menu {
+        grid-row-end: span 2;
+    }
+    aside {
+        grid-column: 1;
+    }
+    /* Typography - increase some font sizes on wider windows */
+    #site-title {
+        font-size: 3rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    figcaption {
+        font-size: 1.25rem;
+    }
+    #main-menu a {
+        font-size: 1.2rem;
+        color: #000;
+        font-weight: bolder;
+    }
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #login ul {
+        display: flex;
+        flex-direction: row;
+    }
+    #logo {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    body {
+        /* Create a centred fixed-width box. */
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    header,
+    footer {
+        grid-column: 1 / span 3;
+    }
+    aside {
+        grid-column: 3;
+    }
+    #login ul {
+        display: inline-flex;
+    }
+    header nav {
+        padding: 0;
+    }
+    /* IMAGES & VIDEOS */
+    img {
+        width: 90%;
+    }
+    #logo {
+        width: 15%;
+    }
+    /* footer */
+    footer {
+        /* We need a flexbox to push the links to the left of the footer
+       and the copyright item to the right. */
+        display: flex;
+        justify-content: space-between;
+    }
+    footer ul {
+        display: flex;
+    }
+    footer li {
+        margin-right: 2em;
+    }
+    main,
+    nav,
+    aside,
+    footer {
+        padding: 2em;
+    }
+    aside figure {
+        margin-bottom: 2em;
+    }
+    /* Flexboxes */
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    #login {
+        align-self: flex-start;
+    }
+    /* Override Mobile Menu */
+    /* Turn the main menu into "normal" navigation */
+    #main-menu {
+        position: static;
+        /* Override the positioning set for mobile menu - "static" is the "normal" value */
+        width: 100% !important;
+        /* Overrides the zero width for mobile menu, so the menu will appear */
+        max-width: 100%;
+        /* In case the max-width is (optionally) set for mobile menu, override it here */
+        height: auto;
+        transition: none;
+        padding-top: 2rem;
+        padding-left: 0rem;
+    }
+    #main-menu li {
+        border: 0;
+    }
+    #main-menu a {
+        padding-right: 2em;
+    }
+    #menu-button,
+    #close-button {
+        display: none;
+    }
+    /* TYPOGRAPHY */
+    body {
+        line-height: 1.5;
+    }
+    h1,
+    h2,
+    #site-title,
+    #login {
+        font-weight: bold;
+        text-align: center;
+    }
+    #site-title {
+        font-size: 3rem;
+    }
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5em;
+    }
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    nav a {
+        font-size: 1.5rem;
+    }
+    figcaption {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    #login a {
+        font-size: 1.3rem;
+    }
+    #main-menu a:hover {
+        color: #ffffff;
+    }
+    #main-menu .current {
+        color: #aa131b;
+    }
+    #main-menu .current:hover {
+        color: #aa131b;
+    }
+    #login a:hover {
+        color: #4bbab2;
+        cursor: pointer;
+    }
+}

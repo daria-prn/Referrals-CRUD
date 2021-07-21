@@ -1,0 +1,5 @@
+[client]
+database = 'nzhealth'
+user = 'ubuntu'
+password = 'Tosya2630320!'
+default-character-set='utf8'

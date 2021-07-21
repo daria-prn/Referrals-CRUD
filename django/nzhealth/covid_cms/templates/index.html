@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NZ Health{% endblock %}</title>
+	{% load static %}  
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <script src="{% static 'js/navigation.js' %}"></script>
+</head>
+
+<body>
+    <header>
+
+        <nav id="login">
+            <ul>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Log out</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Log in</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <div>
+            <span id="menu-button" onclick="openNav()">&#9776;</span>
+            <p id="site-title">NZ Health</p>
+        </div>
+        <img id="logo" src="{% static 'images/logo.jpg' %}" alt="Company logo">
+
+    </header>
+    <nav id="main-menu">
+        <ul>
+            <li><a href="/" class="current">Home</a></li>
+            <li><a href="/show">Referrals</a></li>
+            <li><a href="/news">Company news</a></li>
+            <li><a href="/admin">Admin login</a></li>
+        </ul>
+        <span id="close-button" onclick="closeNav()">&times;</a>
+    </nav>
+
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+
+    <aside>
+    <section class="news">
+        <h2>News 2</h2>
+        <span class="date">03.07.2020</span>
+        <p>Something good is still happening in the world, despite all the bad things</p>
+    </section>
+    <section class="news">
+        <h2>News 1</h2>
+        <span class="date">22.05.2020</span>
+        <p>Some meaningful and informative text about how the company is doing</p>
+    </section>
+
+        </aside>
+        <footer>
+            <p>&copy; NZ Health, 2020</p>
+        </footer>
+</body>
+
+</html>
